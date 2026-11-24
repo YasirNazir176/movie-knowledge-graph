@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#addedTag">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/movie-ontology#User"/>
+    <rdfs:range rdf:resource="http://example.org/movie-ontology#Tag"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#tagTimestamp">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/movie-ontology#Tag"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#Tag">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Tag</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#User">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>User</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#tagForMovie">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/movie-ontology#Tag"/>
+    <rdfs:range rdf:resource="http://example.org/movie-ontology#Movie"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#movieId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/movie-ontology#Movie"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#rated">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/movie-ontology#User"/>
+    <rdfs:range rdf:resource="http://example.org/movie-ontology#Movie"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#Rating">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Rating</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#userId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/movie-ontology#User"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#Genre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Genre</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#ratedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/movie-ontology#Rating"/>
+    <rdfs:range rdf:resource="http://example.org/movie-ontology#User"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#imdbId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/movie-ontology#Movie"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#tmdbId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/movie-ontology#Movie"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#tagName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/movie-ontology#Tag"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#hasGenre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/movie-ontology#Movie"/>
+    <rdfs:range rdf:resource="http://example.org/movie-ontology#Genre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#genreName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/movie-ontology#Genre"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#MovieOntology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:label>Movie Knowledge Graph Ontology</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#taggedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/movie-ontology#Tag"/>
+    <rdfs:range rdf:resource="http://example.org/movie-ontology#User"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#hasTag">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/movie-ontology#Movie"/>
+    <rdfs:range rdf:resource="http://example.org/movie-ontology#Tag"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#timestamp">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/movie-ontology#Rating"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#ratingValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/movie-ontology#Rating"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#ratingForMovie">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/movie-ontology#Rating"/>
+    <rdfs:range rdf:resource="http://example.org/movie-ontology#Movie"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#Movie">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Movie</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/movie-ontology#movieTitle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/movie-ontology#Movie"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+</rdf:RDF>
